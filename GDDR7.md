@@ -26,6 +26,8 @@
 |VDD|1.2V|1.2V or 1.35V|
 |VDDQ|1.2V|1.2V or 1.35V|
 |VPP (power for row select bus)|1.8V|1.8V|
+|Clock| WCK for CA and DQ| CK for CA<br>WCK for DQ|
+
 
 
 

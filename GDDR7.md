@@ -29,4 +29,8 @@
 |Clock| WCK for CA and DQ| CK for CA<br>WCK for DQ|
 
 # Clock
-WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit。
+WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit.
+
+# PAM3
+每个DQ bit有3种可能性，一共有11根DQ，burst 16次，因此共有176个DQ bit，其一共有3^176种可能性。
+原始的数据一共有256bits，每个bit有2种可能性，因此一共有2^256种可能性。

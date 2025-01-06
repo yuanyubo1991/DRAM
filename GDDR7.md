@@ -1,7 +1,7 @@
 # Feature
 | Feature | GDDR7 | GDDR6 |
 |:---:|:---:|:---:|
-|Channel |configurable, 4/2 per Device | 2 per Device |
+|Channel |4 per Device<br>configurable | 2 per Device |
 |Bank| 16 per Channel|16 per Channel|
 |Data Bus| 1byte per Channel| 2 byte per Channel|
 |Prefetch Size| 32n|16n|

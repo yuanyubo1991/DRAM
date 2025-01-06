@@ -8,5 +8,10 @@
 |burst Length| <mark>48</mark> or 32|16|
 |data signaling| PAM3 and NRZ | NRZ|
 |RDQS|RCK|NO|
-|RAS| CA Parity| NO|
+|CABI| Yes|Yes|
+|CA Parity|Yes|No|
+|CRC|Yes|Yes|
+|Self-Refresh|Self-Refresh<br>Sleep<br>Self-Refresh Sleep<br>Hibernate Self-Refresh Sleep|Self-Refresh<br>Hibernate Self-Refresh<br>Hibernate Self-Refresh with VDDQ Off|
+
+
 

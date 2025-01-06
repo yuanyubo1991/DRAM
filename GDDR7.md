@@ -28,14 +28,5 @@
 |VPP (power for row select bus)|1.8V|1.8V|
 |Clock| WCK for CA and DQ| CK for CA<br>WCK for DQ|
 
-
-
-
-
-
-
-
-
-
-
-
+# Clock
+WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit。

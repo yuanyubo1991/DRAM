@@ -31,7 +31,7 @@
 |CK : WCK | 1:4 | 1:2|
 
 # Clock
-WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit.
+WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit.  
 CA is latched by WCK rising edge.
 
 # PAM3

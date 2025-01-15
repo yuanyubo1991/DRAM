@@ -39,6 +39,8 @@ CA is latched by WCK rising edge, naming single data rate.
 每个GDDR7 device最小组织结构是channel，成为原生channel，每个device包含4个原生channel，这四个原生channel可以配置成2个channel。  
 原生channel有5种规格：4Gb/6Gb/8Gb/12Gb/16Gb，因此有5种device density：16Gb/24Gb/32Gb/48Gb/64Gb
 
+# CABI and CAPAR
+If CABI or CAPAR is disabled, it's recommended to be tied to HIGH.
 
 # PAM3
 每个DQ bit有3种可能性，一共有11根DQ，burst 16次，因此共有176个DQ bit，其一共有3^176种可能性。

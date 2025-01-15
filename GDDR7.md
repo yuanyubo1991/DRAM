@@ -8,8 +8,8 @@
 |burst Length| <mark>48</mark> or 32|16|
 |data signaling| PAM3 and NRZ |
 |RDQS|RCK|NO|
-|CABI| Yes|Yes|
-|CA Parity|Yes|No|
+|CABI| Yes <br> No Specified Pin|Yes <br> Specified Pin|
+|CA Parity|Yes  <br> No Specified Pin|No|
 |R/W CRC|Yes|Yes|
 |Self-Refresh|Self-Refresh<br>Sleep<br>Self-Refresh Sleep<br>Hibernate Self-Refresh Sleep|Self-Refresh<br>Hibernate Self-Refresh<br>Hibernate Self-Refresh with VDDQ Off|
 |Temperature Controlled Self-Refresh Rate| Yes|Yes|

@@ -1,13 +1,13 @@
 # Feature
-| Feature | GDDR7 | GDDR6 | HBM3|
-|:---:|:---:|:---:|：---：|
-|Channel |4 per Device<br>configurable | 2 per Device | 16 per Device |
-|Bank| 16 per Channel|16 per Channel| n*16 per Channel (n = 1/2/3/4) |
-|Data Bus| 1byte per Channel| 2 byte per Channel| 4 Byte per Psdudo Channel |
-|Prefetch Size| 32n|16n|8n|
-|burst Length| <mark>48</mark> or 32|16|8|
-|data signaling| PAM3 and NRZ | NRZ| 
-|RDQS|RCK|NO|RDQS|
+| Feature | GDDR7 | GDDR6 |
+|:---:|:---:|:---:|
+|Channel |4 per Device<br>configurable | 2 per Device |
+|Bank| 16 per Channel|16 per Channel|
+|Data Bus| 1byte per Channel| 2 byte per Channel|
+|Prefetch Size| 32n|16n|
+|burst Length| <mark>48</mark> or 32|16|
+|data signaling| PAM3 and NRZ |
+|RDQS|RCK|NO|
 |CABI| Yes|Yes|
 |CA Parity|Yes|No|
 |R/W CRC|Yes|Yes|

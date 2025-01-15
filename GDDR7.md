@@ -43,5 +43,21 @@ CA is latched by WCK rising edge, naming single data rate.
 If CABI or CAPAR is disabled, it's recommended to be tied to HIGH.
 
 # PAM3
-每个DQ bit有3种可能性，一共有11根DQ，burst 16次，因此共有176个DQ bit，其一共有3^176种可能性。
+## Pin Resource
+每根DQ pin有三种状态，再每个clock沿传输的是一个symbol，而不是一个bit，每个symbol代表2个bits。
+DQ[9:0]和DQE，一共11根pin，burst 16次，一共传输176个symbol。
+## Data Requirement
+需要传输的payload为256bits data + 18bits CRC + 1bit severity + 1bit position = 276bits
+
+## 编码方式
+### 11b7s
+用7个symbol resource表示11bits需传输的payload。  
+11bits有2^11 = 2048种可能性，7 symbol可表示3^7 = 2187种可能性。
+### 3b2s
+用2个symbol resource表示3bits需传输的payload。  
+3bits有2^3 = 8种可能性，2 symbol可表示3^2 = 9种可能性。
+### 2b1s
+用1个symbol resource表示2bits需传输的payload。  
+2bits有2^2 = 4种可能性，1 symbol可表示3^1 = 3种可能性。不够
+
 原始的数据一共有256bits，每个bit有2种可能性，因此一共有2^256种可能性。

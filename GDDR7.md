@@ -16,7 +16,7 @@
 |Partial Array Self-Refresh| No | Yes|
 |DFS|Yes|Yes|
 |DVS|Yes|No|
-|<mark>CSP</mark>|Yes|No|
+|<mark>CSP <br> Command Start Point </mark>|Yes|No|
 |On-die ECC| Yes | No|
 |RFM| RFM<br>ARFM<br>Directed RFM| RFM|
 |PPR|Yes|No|

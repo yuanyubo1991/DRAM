@@ -5,7 +5,7 @@
 |Bank| 16 per Channel|16 per Channel|
 |Data Bus| 1byte per Channel| 2 byte per Channel|
 |Prefetch Size| 32n|16n|
-|burst Length| <mark>48</mark> or 32|16|
+|burst Length| PAM3: 16 <br> NRZ: 32|16|
 |data signaling| PAM3 and NRZ | NRZ |
 |RDQS|RCK|NO|
 |CABI| Yes <br> No Specified Pin|Yes <br> Specified Pin|
@@ -35,6 +35,8 @@
 # Clock
 WCK is divided by 4 in DRAM to generate internal DRAM CK for AC timings unit.  
 CA is latched by WCK rising edge, naming single data rate.
+对于PAM3，burst length = 16，则8T WCK对应一笔READ/WRITE data，core_clk : WCK = 1:8  
+对于NRZ，burst length = 32，则16T WCK对应一笔READ/WRITE data，core_clk : WCK = 1:16，或者DDRC core_clk仍然为1/8WCK，只是每2T 调度一笔READ/WRITE command，涉及架构改变 
 
 # Addressing
 每个GDDR7 device最小组织结构是channel，成为原生channel，每个device包含4个原生channel，这四个原生channel可以配置成2个channel。  
@@ -76,3 +78,5 @@ SEV和PSN本来有4种状态，但是对于read，当SEV为1时，PSN为dont car
 # Data Scramble
 DDRC侧已经实现了data scramble，DRAM侧是否还有必要再实现此功能，区别是存入DRAM core的数据是原始的还是scramble之后的。
 
+# ERR
+GDDR7 DRAM有一根DERR pin，用于输出write data crc error或者command parity error

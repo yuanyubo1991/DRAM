@@ -72,3 +72,7 @@ write不传输severity信息，DRAM检测到crc error时通过DERR pin通知DDRC
 
 # Read
 SEV和PSN本来有4种状态，但是对于read，当SEV为1时，PSN为dont care，所以二者一共有3种有效状态，用1个symbol可以表示
+
+# Data Scramble
+DDRC侧已经实现了data scramble，DRAM侧是否还有必要再实现此功能，区别是存入DRAM core的数据是原始的还是scramble之后的。
+

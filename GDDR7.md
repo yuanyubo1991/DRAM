@@ -81,3 +81,6 @@ DDRC侧已经实现了data scramble，DRAM侧是否还有必要再实现此功�
 # ERR
 GDDR7 DRAM有一根DERR pin，用于输出write data crc error或者command parity error.  
 因为CA parity error和data parity error共用DERR pin，所以在调度完write command之后，在一定的时间内检测到的ERR表示CA parity error，超出这个timing之后再检测到的ERR则表示data parity error。
+
+# MRS
+有一部分MR不影响memory core，因此也可以在bank处于active状态时发MRS修改他们

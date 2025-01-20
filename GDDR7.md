@@ -83,4 +83,6 @@ GDDR7 DRAM有一根DERR pin，用于输出write data crc error或者command pari
 因为CA parity error和data parity error共用DERR pin，所以在调度完write command之后，在一定的时间内检测到的ERR表示CA parity error，超出这个timing之后再检测到的ERR则表示data parity error。
 
 # MRS
-有一部分MR不影响memory core，因此也可以在bank处于active状态时发MRS修改他们
+有一部分MR不影响memory core，因此也可以在bank处于active状态时发MRS修改他们  
+有一些与频率相关的register，通过MRS配置之后不会立即生效，而是需要进入SLEEP或self-refresh之后才会生效。不过这个功能可以通过MR（FD_FLAG）配置来关闭  
+

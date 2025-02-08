@@ -86,3 +86,16 @@ GDDR7 DRAM有一根DERR pin，用于输出write data crc error或者command pari
 有一部分MR不影响memory core，因此也可以在bank处于active状态时发MRS修改他们  
 有一些与频率相关的register，通过MRS配置之后不会立即生效，而是需要进入SLEEP或self-refresh之后才会生效。不过这个功能可以通过MR（FD_FLAG）配置来关闭  
 
+# CA Training
+
+CA Training通过以下几种方式进入：  
+
+- 发CATE command
+
+- 发生CA Parity error时，自动进入CA Training mode
+
+- MR SLX2CAT = 1，发生退出Sleep Mode时自动进入CA Training mode
+
+- MR SRSLX2CAT = 1，发生退出Self-Refresh Sleep时自动进入CA Training mode
+
+- 初始化完成时，自动进入CA Training mode
